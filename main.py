@@ -16,7 +16,6 @@ import os
 import time
 
 # Step 1
-import wget
 url = "https://www.amfiindia.com/spages/NAVAll.txt"
 wget.download(url, "navall.txt")
 
@@ -35,14 +34,13 @@ csv_file = pd.read_csv("navall.csv")
 # print(csv_file['ISIN Div Payout/ ISIN Growth'])
 print("Step 3 done")
 
-exportFileName=str(time.time())+'.csv'
+exportFileName='out/'+str(time.time())+'.csv'
 
 #Step 4
 def generateCSV(csv_file):
 
     header = ['Scheme Type', 'Fund Family', 'Scheme Code', 'ISIN Div Payout/ISIN Growth', 'ISIN Div Reinvestment', 'Scheme Name', 'Net Asset Value', 'Date']
 
-    data_array = []
     line_array = []
     writeX = csv.writer(open(exportFileName, 'w'))
     writeX.writerow(header)

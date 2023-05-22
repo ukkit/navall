@@ -9,6 +9,8 @@ __pycache__/
 # Custom
 navall*.*
 *.csv
+*.xlsx
+out/*.*
 
 # Distribution / packaging
 .Python
