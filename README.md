@@ -2,7 +2,15 @@
 
 python script that downloads entire NAVAll.txt file from amfiindia site and then generates CSV file in following format:
 
-> Scheme Type, Fund Family, Scheme Code, ISIN Div Payout/ISIN Growth, ISIN Div Reinvestment, Scheme Name, Net Asset Value, Date
+``` csv
+Scheme Type, Fund Family, Scheme Code, ISIN Div Payout/ISIN Growth, ISIN Div Reinvestment, Scheme Name, Net Asset Value, Date
+```
+
+It also generates SQL file with insert statements, like below:
+
+``` sql
+INSERT INTO <TABLENAME> VALUES ('Open Ended Schemes(Debt Scheme - Banking and PSU Fund)', 'Aditya Birla Sun Life Mutual Fund', '119551', 'INF209KA12Z1', 'INF209KA13Z9', 'Aditya Birla Sun Life Banking & PSU Debt Fund  - DIRECT - IDCW', '112.1196', '22-May-2023');
+```
 
 ## Required Packages
 
@@ -41,4 +49,3 @@ INSERT INTO 20230523114748 VALUES ('Open Ended Schemes(Debt Scheme - Banking and
 INSERT INTO 20230523114748 VALUES ('Open Ended Schemes(Debt Scheme - Banking and PSU Fund)', 'Aditya Birla Sun Life Mutual Fund', '108272', 'INF209K01LX6', 'INF209KA11Z3', 'Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW', '158.6509', '22-May-2023');
 INSERT INTO 20230523114748 VALUES ('Open Ended Schemes(Debt Scheme - Banking and PSU Fund)', 'Aditya Birla Sun Life Mutual Fund', '110282', 'INF209K01LU2', '-', 'Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - MONTHLY IDCW', '111.6845', '22-May-2023');
 ```
-
