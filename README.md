@@ -19,6 +19,9 @@ INSERT INTO <TABLENAME> VALUES ('Open Ended Schemes(Debt Scheme - Banking and PS
 3. csv
 4. os
 5. datetime
+6. sqlalchemy
+7. re
+8. configparser
 
 ## Execution
 
@@ -49,3 +52,20 @@ INSERT INTO 20230523114748 VALUES ('Open Ended Schemes(Debt Scheme - Banking and
 INSERT INTO 20230523114748 VALUES ('Open Ended Schemes(Debt Scheme - Banking and PSU Fund)', 'Aditya Birla Sun Life Mutual Fund', '108272', 'INF209K01LX6', 'INF209KA11Z3', 'Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW', '158.6509', '22-May-2023');
 INSERT INTO 20230523114748 VALUES ('Open Ended Schemes(Debt Scheme - Banking and PSU Fund)', 'Aditya Birla Sun Life Mutual Fund', '110282', 'INF209K01LU2', '-', 'Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - MONTHLY IDCW', '111.6845', '22-May-2023');
 ```
+
+## MYSQL Database
+
+1. Make a copy of file.ini.sample file as file.ini and populate the mysql database details
+2. Uncomment last 2 lines in main.py file:
+
+    ```python
+    # sql_to_mysql(tableName, sqlFileName)
+    # print("Step 6 done")
+    ```
+
+3. Execute the script and a new table will be created, with table name as in sql file (20230523114748)
+4. The output will show how many records were commited, and list of failed commits:
+
+    ```python
+    Commited 12866| Failed 0
+    ```

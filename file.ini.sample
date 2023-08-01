@@ -1,0 +1,5 @@
+[MYSQL1]
+hostname = localhost
+dbname = navall
+uname = mysql_user_name
+pwd = mysql_password
