@@ -25,6 +25,12 @@ from sqlalchemy import Table, Column, Integer, String, MetaData, text
 from sqlalchemy import insert
 from datetime import datetime
 
+import argparse
+parser = argparse.ArgumentParser(description="Parse bool")
+parser.add_argument("--importDB", default=False, action="store_true",
+                    help="Flag to do import to database")
+args = parser.parse_args()
+
 # Step 1
 url = "https://www.amfiindia.com/spages/NAVAll.txt"
 wget.download(url, "navall.txt")
@@ -174,5 +180,8 @@ csv_to_sql_insert(csvFileName, tableName, sqlFileName)
 
 print("Step 5 done, "+sqlFileName+" generated")
 
-# sql_to_mysql(tableName, sqlFileName)
-# print("Step 6 done")
+if args.importDB:
+    sql_to_mysql(tableName, sqlFileName)
+    print("Step 6 done")
+else:
+    print("Use flag --importDB to import file to database")

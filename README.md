@@ -56,11 +56,10 @@ INSERT INTO 20230523114748 VALUES ('Open Ended Schemes(Debt Scheme - Banking and
 ## MYSQL Database
 
 1. Make a copy of file.ini.sample file as file.ini and populate the mysql database details
-2. Uncomment last 2 lines in main.py file:
+2. Run the file with **--importDB** flag
 
     ```python
-    # sql_to_mysql(tableName, sqlFileName)
-    # print("Step 6 done")
+    python3 main.py --importDB
     ```
 
 3. Execute the script and a new table will be created, with table name as in sql file (20230523114748)
@@ -69,3 +68,5 @@ INSERT INTO 20230523114748 VALUES ('Open Ended Schemes(Debt Scheme - Banking and
     ```python
     Commited 12866| Failed 0
     ```
+
+    > Importing to database operation is time consuming
