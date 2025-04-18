@@ -1,3 +1,5 @@
+# Newer version at : https://github.com/ukkit/nav_loader
+
 # NAVALL
 
 python script that downloads entire NAVAll.txt file from amfiindia site and then generates CSV file in following format:
